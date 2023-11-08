@@ -8,7 +8,7 @@ Currently, two official plugins are available:
 
 ![1 screenshot](/screenshot/screenshot.png?raw=true "1 screenshot")
 
-![2 screenshot](/screenshot2/screenshot.png?raw=true "2 screenshot")
+![2 screenshot](/screenshot/screenshot2.png?raw=true "2 screenshot")
 
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
