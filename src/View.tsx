@@ -3,16 +3,19 @@ import { Card ,CardGroup, Button } from "react-bootstrap"
 import { useSelector , useDispatch } from "react-redux";
 import { addfavcomic , deletefavcomic } from "./redux/appSlice";
 import { useParams } from "react-router-dom";
+import { state } from "./interfaces"
+
 import i404 from './assets/404.svg'
 import heart from '/heart.svg'
 import heartsolid from '/heartsolid.svg'
 
+
 function View (){
     const dispatch = useDispatch();
-    const appState = useSelector(state=>state.app);
+    
+    const appState = useSelector((state:state)=>state.app);
     const params = useParams();
     const [comic, setComic]=useState(-1);
-        
 
     function page404(){
         return(<div style={{ display: 'flex' , flexWrap: 'wrap', justifyContent: "space-around", alignItems: "center", padding: '5px',}}>
@@ -32,7 +35,8 @@ function View (){
     
     useEffect(()=>{
         if(params.id){
-            const comicf = appState.comicdata.findIndex(comicf=>(comicf.id==params.id))
+            const id: string=params.id
+            const comicf = appState.comicdata.findIndex(comicf=>(comicf.id==parseInt(id)));
             setComic(comicf);
         }
     }        

@@ -11,7 +11,7 @@ import {Navbar, Nav,Container} from "react-bootstrap"
 import { BrowserRouter, Route, Routes , Link } from "react-router-dom";
 
 class App extends Component {
-  constructor(props){
+  constructor(props: object){
     super(props);
   }
 

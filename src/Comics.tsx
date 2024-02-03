@@ -5,6 +5,7 @@ import { addcomic , addfavcomic , deletefavcomic} from "./redux/appSlice";
 import { Link } from "react-router-dom";
 import heart from '/heart.svg'
 import heartsolid from '/heartsolid.svg'
+import { state } from "./interfaces"
 
 const PUBLIC_KEY = '351c4c129378deac963ac518834727a8';
 const HASH = '785c929020433a3b75bf14af63b0a9b9';
@@ -13,7 +14,7 @@ const API_URL = 'https://gateway.marvel.com:443/v1/public/comics?hasDigitalIssue
 
 function Comics() {
     const dispatch = useDispatch();
-    const appState = useSelector(state=>state.app);
+    const appState = useSelector((state :state)=>state.app);
 
     useEffect(() => {
         comicfetch();
