@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { app } from "../interfaces";
 
-const initialState = {
-  comicdata: [],
+const initialState:app = {
+  comicdata:[]
 };
 
 export const appSlice = createSlice({
   name: "app",
   initialState,
   reducers: { 
-    addcomic: (state, action) => {
+    addcomic: (state:app, action) => {
       state.comicdata.push(action.payload);
     },
     addfavcomic: (state, action) => {
